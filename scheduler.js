@@ -48,18 +48,14 @@ $( document ).ready(function() {
         // Add save logo inside the button.
         // Append save button logo to the button tag.
         // Append save button element to the save button parent column.
-        let saveBtnColEl = $("<div>");
-        saveBtnColEl.addClass("col-sm-2");
-        
-        let saveBtnEl = $("<button>");
-        saveBtnEl.addClass("saveBtn");
-        saveBtnEl.attr("id", `${i}`);
+        let saveBtnColEl = $("<button>");
+        saveBtnColEl.addClass("col-md-1 saveBtn");
+        saveBtnColEl.attr("id", `${i}`);
 
         let saveLogoEl = $("<i>");
         saveLogoEl.addClass("fas fa-save");
 
-        saveBtnEl.append(saveLogoEl);
-        saveBtnColEl.append(saveBtnEl);
+        saveBtnColEl.append(saveLogoEl);
 
 
         // Append hour column, schedule column, and save button column to the time block row.
