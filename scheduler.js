@@ -1,7 +1,7 @@
 // Method to make the functions run after the page is ready.
 $( document ).ready(function() {
 
-    // Call the getCurrentDay and createTimeBlocks functions.
+    // Call the getCurrentDay, createTimeBlocks, and saveButton functions.
     getCurrentDay();
     createTimeBlocks();
     saveButton(); 
