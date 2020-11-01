@@ -81,6 +81,9 @@ function createTimeBlocks() {
         
         // Append all the collected elements to the class container.
         $(".container").append(timeBlockRow);
+
+        // Set the key for the local storage as the index number of each schedule.
+        getScheduleData(i);
     };
 };
 
@@ -100,4 +103,11 @@ function saveButton() {
         let getSchedule = $(this).parent().children(".description").val();
         localStorage.setItem(getScheduleHour, getSchedule);
     });
+};
+
+// Create function to get the schedule text data and 
+// keep it save in the schedule textarea blocks.
+// Key is the time and the value is the task.
+function getScheduleData(time) {
+    let task = localStorage.getItem(time);
 };
