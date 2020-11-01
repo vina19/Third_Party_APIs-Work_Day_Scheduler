@@ -51,7 +51,7 @@ function createTimeBlocks() {
         // Add textarea element, classes and id for the textarea.
         let scheduleColEl = $("<textarea>");
         scheduleColEl.addClass("col-sm-8 past description");
-        scheduleColEl.attr("id", `text${i}`);
+        scheduleColEl.attr("id", `task${i}`);
 
         // if statement to decide which color to display for the past, present, and future schedules.
         if ( timeBlockRow.data("time") == currentHour ) {
@@ -110,4 +110,10 @@ function saveButton() {
 // Key is the time and the value is the task.
 function getScheduleData(time) {
     let task = localStorage.getItem(time);
+
+    // If there is task value inside the localstorage
+    // when grabbing the task then keep those text inside the block schedule.
+    if(task) {
+        $(`task${time}`).text(task);
+    }
 };
